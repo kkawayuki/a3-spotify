@@ -30,7 +30,7 @@ N/A unless you count AI conversations (which I'll link to the submission)
 
 5. Did you add a bonus feature to your submission? If so, what is it and how should we see it?
 
-N/A aside from a very minimal fix with the search component to properly clear the search query between separate invokations of the search() function
+N/A aside from a very minimal fix with the search component to properly clear the search query between separate invocations of the search() function
 
 6. Is there anything special we need to know in order to run your code?
 
