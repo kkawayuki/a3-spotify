@@ -18,6 +18,8 @@ export class SearchComponent implements OnInit {
   searchCategories:string[] = ['artist', 'album', 'track'];
   resources:ResourceData[] = [];
 
+  resultCategory:string = '';
+
   //spotify already constructed here!
   constructor(private spotifyService:SpotifyService) { }
 
@@ -25,9 +27,15 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
+    //fixing issue where consecutive searches are handled
+    var category:string = this.searchCategory;
+
+    this.resources = [];
+
     //TODO: call search function in spotifyService and parse response
     this.spotifyService.searchFor(this.searchCategory, this.searchString).then((data) =>
     {
+      this.resultCategory = category; 
       this.resources = data; 
     })
   }
