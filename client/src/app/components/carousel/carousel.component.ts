@@ -8,8 +8,8 @@ import { ResourceData } from '../../data/resource-data';
     standalone: false
 })
 export class CarouselComponent implements OnInit {
-	@Input() carouselId:string;
-	@Input() resources:ResourceData[];
+	@Input() carouselId:string ='';
+	@Input() resources:ResourceData[] =[];
 
   constructor() { }
 
